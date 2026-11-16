@@ -1,0 +1,132 @@
+[skepticalgenius] 
+  [kevinsimper] That is pretty smart, torrent should have been used for more things, and this is a perfect usecase!
+  [phoyd] Torrents should really be the preferred method for distributing AI model weights. Why rely on a single point of failure like Hugging Face? BitTorrent was made for exactly this.
+    [TeMPOraL] Yeah, I <i>thought</i> they were used for this already. Surprised this is news, but also relieved.
+      [Oxodao] IIRC Mistral used to do it, not sure if that&#x27;s still the case<p>EDIT&#x2F; Yes they did, that no longer seems to be the case though<p><a href="https:&#x2F;&#x2F;x.com&#x2F;MistralAI&#x2F;status&#
+    [CodesInChaos] In my experience public torrents often die as they grow older. It doesn&#x27;t help that BitTorrent V1 makes long term seeding annoying, and BitTorrent V2 is almost never used.
+      [monsieurbanana] I never understood this, is there anything that makes it difficult for the original uploader, the one that supposedly offers the file directly, to offer a torrent instead for the same amount of time?<
+        [cube00] If they&#x27;re no longer using that model they may not be willing to continue using their storage for it.
+          [csomar] How does this address the previous point? If they are not providing storage, then centralized or decentralized doesn’t make a difference.<p>Torrent&#x2F;P2P can only add redundancy, so it’s impossible
+          [vlyan] yes, but a few dedicated hoarders could keep many models alive, and I&#x27;m fairly certain the local LLM community has plenty of people who would.
+            [mitxela] They don&#x27;t. That&#x27;s the conversation topic.<p>Nor do they need to. 99% of everything is crap, and not worth prescribing except for a random sample so future historians can study our crap.
+        [zenoprax] Every change to the source is effectively a new torrent. This creates a ton of fragmentation as data is reorganized, remixed, reencoded, and so on.<p>You can see this with many Linux distros: there is
+          [righthand] &gt; Distros are a bad use case for P2P anyway since you depend on upstream as soon as you start upgrading and installing packages.<p>This is true for any distribution method not just p2p. You can eve
+            [zenoprax] Yeah, I just use the &quot;netinstaller&quot; ISOs since it&#x27;s much smaller and never needs to be updated. If I had a need for air-gapped&#x2F;offline installs I&#x27;d either download a larger IS
+          [chmod775] You can trivially have storage deduplication for the files served via torrent, transparent to the protocol. The most trivial version of this that you can do today with pretty much any client is having
+            [skeledrew] &gt; files serving multiple overlapping torrents<p>This sounds wildly complex, especially from a discovery perspective.
+              [chmod775] I don&#x27;t see why it would be. It&#x27;s transparent to other clients just like it is to the protocol. It cannot be more complex than alternatives by construction.
+            [deadbunny] Or use a filesystem with dedupe like ZFS.
+          [NooneAtAll3] but model releases are already non-changeable?
+            [zenoprax] Yes, models are a <i>good</i> use for P2P especially if everyone agrees to share the same torrent <i>and</i> someone (or a cohort) commit to seeding for the long haul.
+          [vova_hn2] IPFS has a solution [0] to this problem<p>[0] <a href="https:&#x2F;&#x2F;specs.ipfs.tech&#x2F;ipns&#x2F;ipns-record&#x2F;" rel="nofollow">https:&#x2F;&#x2F;specs.ipfs.tech&#x2F;ipns&#x2F;ipns-record&#
+            [mitxela] Most of IPFS doesn&#x27;t actually work very well, if you&#x27;ve ever tried to use it
+              [vova_hn2] &gt; if you&#x27;ve ever tried to use it<p>Heh, you got me :) IPFS is one of those things that I love reading and about and thinking about using someday, but somehow never get around to it.
+                [mitxela] The problems begin with taking 5-10 minutes to locate a file on the network. That&#x27;s right, when you ask for a file it takes 5-10 minutes. Also if the file isn&#x27;t in the network at all then it
+        [debugnik] You can add an existing HTTP download as a &quot;web seed&quot; to a torrent, so  they don&#x27;t actually need to do anything for people to share it as a torrent.
+      [zenoprax] You only need one person&#x2F;organization to commit to seeding. The majority of people do not want to seed at all without some sort of incentive.<p>If this site represents a coordinated datahoarding 
+        [csomar] The last guy (kimdotcom) who was working on this (incentive for seeding) seems to be heading to the US: <a href="https:&#x2F;&#x2F;www.rnz.co.nz&#x2F;news&#x2F;science-and-technology&#x2F;651123&#x2F;
+      [ranger_danger] I always wondered why v2 is never used... you can even search for files by their individual hash with it.
+        [mitxela] Because history is path-dependent, as engineers keep learning over and over again. It doesn&#x27;t matter whether Plan9 is theoretically superior to Linux - we&#x27;re all on Linux and nobody&#x27;s p
+      [bilegeek] The biggest problem with BTv1 was the lack of per-file checksumming, and swarm merging (i.e. individual files have shared seeding pools across torrents). BTv2 specs the latter, but I think only BiglyB
+      [Retr0id] A torrent with a webseed is strictly more resilient than a direct download link alone.
+      [PunchyHamster] Yeah but that&#x27;s what provider like huggingface could just do, keep seeding the models so they are still accessible
+    [boredumb] ages ago I tried using IPFS to more or less accomplish this, I imagined it to act more like a weights&#x2F;training data network fs that everyone would be able to participate in.
+    [pmdr] HF is meant to be a single point of control. AI models and Linux distros aren&#x27;t usually for normies, so distribution via torrents would make sense, especially to save the provider some bandwidth.
+  [yieldcrv] great initiative, it&#x27;s really weird seeing efficiencies get rediscovered in the LLM audience, because these efficiencies aren&#x27;t even what I would consider to be old<p>but I guess they are
+  [skeledrew] Arguably this should&#x27;ve been a thing since day 1 (and probably would&#x27;ve helped to prevent the buyout), but better late than never.
+    [RobotToaster] Hugging face seemed like buyout bait from day one.
+      [Avicebron] Which makes it more surprising that something like this didn&#x27;t exist. I&#x27;m relieved it does though.
+      [hirako2000] The GitHub for models and AI. I remember.<p>When a business subsidizes for several years all its offerings, one can guess how it will end.
+  [casper14] Honestly, models are torrents will end any effort from the big AI labs to stop open models. No way to prevent weights from being shared, just like mobies. Genie is out of the bottle
+  [mococa] Steam &amp; Blizzard (probably others) used to delivery games through torrent protocol in the past, before CDNs became cheaper.<p>When StarCraft 2 was lauched, the installer (before Battle.net install
+    [alexpotato] I&#x27;ve worked at trading firms where the &quot;reference data master&quot; file is usually a big json or equivalent.<p>To get the file out to 100s or 1000s of machine they would often use private b
+      [mococa] Same here. Inspired by both, I used to delivery videos over torrent to in door machines since at that time, there&#x27;s no CDNs (or it was difficult to get one).
+      [mitxela] As a private network, they have the option of multicast.
+        [alexpotato] When I retire and&#x2F;or get &quot;F You&quot; money, I&#x27;m going to publicly tell a story about multicast, bittorrent and &quot;not invented here&quot; syndrome.
+      [ehe78qhe] I&#x27;ve seen this used for distributing container images in networks with awkward network topologies (e.g. a lot of bandwidth within a site or sub-site but limited bandwidth to central registries)
+    [bayindirh] Oh, story time:<p>Once I was using Blizzard&#x27;s downloader to install something (StarCraft, Diablo, I don&#x27;t remember), and it was kinda slow. I disabled P2P downloads and speed skyrocketed, an
+      [skeptic_ai] So how come was using your own ip? Become a Diablo node installer so you downloaded from there, like how can they convert your own akamai instance into anode without you knowing?
+        [bayindirh] It&#x27;s not my own IP, but our IP block. As an institution we have a couple of big networking related hats, so we have a couple of B blocks (&#x2F;16 networks) for ourselves. The IP was from one of 
+    [Aurornis] Several companies tried this for distributing software.<p>It was very controversial. Users were angry that software companies were using their internet bandwidth to distribute their software. Made a l
+      [ivanmontillam] If only Blizzard servers were seeders, and clients were only leechers, that&#x27;d have not been a problem.
+        [ehe78qhe] This is less efficient (in bandwidth, complexity, and monetary cost) than an HTTPS based CDN.
+        [mococa] There’s web seeding
+        [x-complexity] That&#x27;s just a CDN, but now it&#x27;s not HTTP accessible (thus strictly worse).
+      [kzrdude] Typical example to show that people who want to be angry will be angry, even for pointless things.
+        [mh-] As someone who was annoyed by it at the time, I don&#x27;t think it&#x27;s a good example of that.<p>This was in an era of <i>much</i> more limited upstream bandwidth. The p2p nature was obscured from
+          [mitxela] I think it&#x27;s like residential proxies. People get upset about &quot;it&#x27;s using my thing!&quot; even though it has literally no effect on them.
+            [mh-] I don&#x27;t know how to respond to that, because it has quite a few negative effects on them..
+            [bayindirh] When you have barely the upstream bandwidth to send the ACK stream of your downloads, anything sending something becomes a big burden on your system.<p>Not everyone has the luxury of fully symmetric i
+      [blharr] &gt;software companies were using their internet bandwidth to distribute their software<p>If I understand the description correctly,  microsoft still does this!<p><a href="https:&#x2F;&#x2F;support.mi
+        [himata4113] Steam still does this! For your local network only and not using the torrent protocol.
+    [ehe78qhe] Steam has a limited form of p2p delivery, used on LANs: <a href="https:&#x2F;&#x2F;help.steampowered.com&#x2F;en&#x2F;faqs&#x2F;view&#x2F;46BD-6BA8-B012-CE43" rel="nofollow">https:&#x2F;&#x2F;help.ste
+  [bananaflag] Now I want GPT-4.5
+  [reilly3000] I’ve been wondering when this will come. The days are numbered for abliterated models to be published on HF I think. Why wouldn’t the government want a central control there?
+  [grommz] If I search for &#x27;uncensored&#x27; there are no torrents available. Uncensored models should be top priority, especially now that Nvidia owns HuggingFace and will enshittify the platform in accord
+    [sneurlax] There are such results on huggingface tho.  Also search for the keywords “abliteration” and “heretic”.  Heretic is a tool used to abliterate, that is decensor, models
+    [behole] That was my my first search too. I know they are still listed on HF but every time I try and use one, the links are dead or the size is beyond my scope. Was hoping for a fresh batch. Ill check back.
+  [hgoel] Torrents always seemed like the more sensible way to distribute model weights.<p>Though I have been disappointed that most of these have been spurred on by the misleading claim that abliterated models
+  [wren6991] Speaking to the &quot;uncensored model&quot; angle: there&#x27;s little reason to distribute abliterated weights anyway. Instead of orthogonalising the weights that write back to the residual stream, 
+    [jamienk] Can you explain this a bit to a non-expert?<p>I haven&#x27;t wrapped my mind around this
+      [mitxela] Instead of editing the weights so they don&#x27;t create the refusal signal, just let them do whatever, then delete the refusal signal itself. You don&#x27;t want to edit quantised weights because it 
+      [wren6991] This is the original description of abliteration and it&#x27;s quite approachable and interesting to read: <i>Refusal in Language Models Is Mediated by a Single Direction</i> (<a href="https:&#x2F;&#x
+        [chermi] Damn what&#x27;s happened since this? Presumably they scramble refusal intentionally somehow now? Like intentionally couple it to &quot;directions&quot; that effect performance if messed with? Or is i
+          [mitxela] I&#x27;m not active in this space but why do you think anything happened since this? As far as I know, it still works.
+          [wren6991] I&#x27;ve seen attempts to obfuscate the refusal direction, like here: <a href="https:&#x2F;&#x2F;arxiv.org&#x2F;html&#x2F;2608.18093v1" rel="nofollow">https:&#x2F;&#x2F;arxiv.org&#x2F;html&#x2F;2608.
+        [schoen] I&#x27;m pretty sure this was achieved with prompting rather than with weights, but there is a chatbot available that tries to maximize the motivated refusals:<p><a href="https:&#x2F;&#x2F;www.goody2.
+    [rhdunn] So... distribute a LoRA (or equivalent) that modifies the base weights with the abliteration vectors. That makes sense as it would be possible to try different abliterations and keep the storage space
+      [wren6991] Yeah, orthogonalisation is a special case of a rank-1 LoRA.
+        [ziofill] I don’t think this is true.
+          [wren6991] Could you please explain why? It&#x27;s an additive update to the weights, adding an outer product of a vector with its transpose, which must have rank 1. What am I missing?
+            [ziofill] You can’t diagonalize a generic matrix by adding a rank 1 matrix. That holds only for dimension 2.
+    [3eb7988a1663] Who is offering the refusal vectors or instructions on how to generate them?
+      [p-e-w] I am, in fact, I’m offering something much better, a compact format that exactly restores an abliterated model from a tiny JSON file:<p><a href="https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;LocalLLaMA
+      [wren6991] Here&#x27;s a widely used toolkit: <a href="https:&#x2F;&#x2F;github.com&#x2F;p-e-w&#x2F;heretic" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;p-e-w&#x2F;heretic</a><p>Distributing the vectors the
+    [derefr] I believe abliterated models are mostly still created at this point because they&#x27;re &quot;universal&quot;: they can not only be run locally, and on cloud GPUs, but also on &quot;managed inference
+      [quotemstr] These providers can also just ignore insinuations they&#x27;re being &quot;unethical&quot; when people come to them with steering vectors in hand. Nobody has to listen to the scolds.
+        [derektank] Not if those people are legislators or law enforcement
+    [doublerabbit] &gt; Similarly, abliterated models regain some of their refusal behaviour when they&#x27;re re-quantised after abliteration<p>Thanks for this information, Q4 seemed fine but they reappeared again in Q
+    [nperez] Yeah I use a custom fork of llama.cpp that has an abliteration feature that basically does this. It&#x27;s sloppily vibe coded and I don&#x27;t have time to coordinate on a way to do this cleanly upst
+    [c7b] Interesting. Is there a paper that explains this in a bit more detail, like [0] for abliteration (underlying the Heretic software, afaik)?<p>[0] <a href="https:&#x2F;&#x2F;arxiv.org&#x2F;abs&#x2F;2406
+      [wren6991] That paper you linked has all of the information you need. The linear algebra they do on the weights there to null out one direction reduces to a single (dot-product + broadcast-multiply + add) on the
+    [khalic] I didn’t know about that method, thank you. I’ve needed a local model for security research but Qwen 27b abliterated did 30% worse than the stock weights on my internal benchmarks (I just skip the pub
+    [djmips] A question that comes up in my mind, since I don&#x27;t fully understand how this works, is how does this affect runtime performance. It feels like abliterated weight models would work faster than som
+      [fc417fc802] The vector that needs to be checked is length n while computing that vector requires n^2 operations. I haven&#x27;t benchmarked it but I expect the performance overhead to be a rounding error.
+  [Razengan] So begins the Merovingian and the Exiles..
+  [wolfy1993] I&#x27;d support this if I didn&#x27;t have to post to xitter to claim my username.<p>Really odd approach.
+    [mitxela] You can also use HN but your HN account will be either shadow banned or rate limited because then you are spamming.
+      [QuantumNomad_] Instead of telling people to post spam in the thread, they should do the same way that is done for example by these:<p>- <a href="https:&#x2F;&#x2F;meet.hn&#x2F;" rel="nofollow">https:&#x2F;&#x2F;meet
+        [mitxela] I don&#x27;t think the point is to link the HN account to the PF account. I think the <i>point</i> is to spam HN.
+  [jamienk] Let&#x27;s imagine that a model is pulled from HF by order of the new overlords or because of some other kind of censorship. Wouldn&#x27;t the question of it having a Free license or not potentially b
+  [mannyv] I can see all these old models hanging out and bitching about the newfangled models that think they&#x27;re so great.<p>&quot;Trillions of parameters? Trillion my ass. Back in my day we got by with mi
+  [mmaunder] Edit: Deleted. Been oversharing a bit re research I&#x27;m doing, and the payoff is replies from folks who haven&#x27;t bothered to go and take a look themselves, which I then have to spend more cycle
+    [KerrAvon] DS 4.1 Flash absolutely has guardrails. Maybe not ones as effective as some models.
+    [chuckadams] &gt; DS 4.1 Flash, which is unguardrailed<p>Try asking it about Tianmen Square.  I use DS myself, but let&#x27;s not kid ourselves.
+      [quaintdev] For that specific query, just use US open weight model, oh...wait
+        [hostcontroller] open wait
+  [sandcat_] What on earth is going on with all the spam in this thread? Is this how you claim a username?
+    [JonChesterfield] That or X...
+      [JonChesterfield] Turns out that the HN flagging mechanism hides the message from their auth check, so the spam doesn&#x27;t actually work anyway. Oh well.
+    [mitxela] Yes. This thing literally makes you spam HN in order to sign up. And for that reason this submission should be flagged.
+      [itomato] Yes, and then delete or edit the comment.
+  [golem14] I wish they had used a better name. Why try to make it sound sinister and adjacent to piratebay etc? It&#x27;s not that these models are illegal to own or download.
+  [bicepjai] You did not have to call it “pirate”. That kind of set the negative tone for the website, and all the comments are looking at it with that view from the start. But it’s a great emoji Lego. I am workin
+    [toomuchtodo] Mirror the magnet torrent links at AcademicTorrents if you’d like. They are just a collection of url strings after all.<p><a href="https:&#x2F;&#x2F;academictorrents.com&#x2F;" rel="nofollow">https:&#
+    [mitxela] Piracy has a positive tone for me. It implies liberating information.
+      [__MatrixMan__] Aye!<p>Pro-democracy Protesters of the Caribbean just doesn&#x27;t have the same ring to it.
+    [amelius] The &quot;pirate&quot; name ensures that no company will buy it out later ;)
+  [Scaled] This site could be useful also since there&#x27;s been a recent trend of abliterated model providers demanding a hugging face account and email collection.  I assume this is so the providers can spam 
+  [thih9] &gt; The goal is permanence for open-source AI<p>My instinct is to correct this to “open weight”, because when I filter huggingface by open source[1], I get only one result.<p>Then again, this could b
+  [shevy-java] I do not want AI to live forever though.
+  [JonChesterfield] This is really important. I am already tired of hoarding rclone copies of huggingface torrents and periodically checking them for bitrot. Pirateface is not a very helpful name for it though and it doe
+  [sharktheone] I hope GPT-3.5 will be released at some point. Would make me really sad if that gets lost at some point
+  [mitxela] Why is the sign-up system so complicated? Why not just log into your HF account and be done? You&#x27;re trying to force people to spam on X and HN so that their X and HN accounts get deleted?
+  [Proobel] Why not use existing platforms? In any case, a resource like this is a step toward open AI.
+  [ButlerianJihad] <a href="https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;International_Talk_Like_a_Pirate_Day" rel="nofollow">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;International_Talk_Like_a_Pira...</a>
+  [protocolture] waow<p>(based based based based based based based)
+  [sakurei] s
+  [sakurei] ss
+  [totetsu] Is this a reaction to the idea that when HuggingFace comes into Nvidia owership, lots of models are going to be removed from the platform?
+  [kittikitti] Making it to the finish line to seed a model is satisfying.
+    [chadgpt7] I&#x27;ve been known to seed a model or two in my day. Still married to one!
+  [ovia-inc] ovia-inc

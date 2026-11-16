@@ -1,0 +1,4 @@
+CT: pay.pirateface.co,pirateface.co,www.pay.pirateface.co,www.pirateface.co
+PYPI: 0.2.9
+HOME_STATIC: 4bc2d4b2c3e2215c5a2b4b180b29a816fab1838dd7102908b122bbdd59bdbed3
+BASELINE_UPDATED: 2026-11-16T10:00:32Z
